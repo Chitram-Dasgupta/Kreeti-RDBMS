@@ -38,7 +38,7 @@ HAVING COUNT(*) > 1;
 SELECT dept.department_name,
 CASE
   WHEN count(*) = 1 THEN 'One Candidate'
-  ELSE 'Multiple Candidate'
+  ELSE 'Multiple Candidates'
 END AS assignedTO
 FROM employees AS emp, departments AS dept
   WHERE emp.department_id = dept.department_id
