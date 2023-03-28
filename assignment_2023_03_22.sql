@@ -11,15 +11,15 @@ FROM employees AS e
 -- 2. From the following tables write a SQL query to find the departments whose location is
 -- in "Jammu Kashmir" or "Jharkhand". Return Department Name, state_province,
 -- street_address.
-SELECT d.department_name, l.city
+SELECT d.department_name, l.state_province, l.street_address
 FROM departments AS d INNER JOIN locations AS l
 ON d.location_id = l.location_id 
-WHERE l.city IN ('Jammu Kashmir', 'Jharkhand');
+WHERE l.state_province IN ('Jammu Kashmir', 'Jharkhand');
 
 -- 3. From the following tables write a SQL query to find the count of employees present in
 -- different jobs whose average salary is greater than 10,000. Return all the jobs with
 -- employee count, Job Name, and average salary.
-SELECT COUNT(emp.first_name), j.job_title, AVG(emp.salary)
+SELECT COUNT(emp.first_name) AS employee_count, j.job_title, AVG(emp.salary)
 FROM 
   employees emp INNER JOIN jobs AS j 
     ON emp.job_id = j.job_id
@@ -63,7 +63,7 @@ FROM employees AS emp
 WHERE emp.salary > 50000
 AND (loc.city = 'New York' OR loc.state_province = 'California')
 GROUP BY dept.department_name, loc.state_province
-HAVING COUNT(*) > 5;
+HAVING COUNT(emp.employee_id) > 5;
   
 -- 7. List any employees who have dependents and have a job title that includes the word
 -- 'manager', and sort the results by department name in ascending order.
