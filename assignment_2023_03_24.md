@@ -153,7 +153,17 @@ Let R = (R1 and R2) be a decomposition such that R1 ∩ R2 ≠ ∅.
 
 ## Answer
 
+S<sup>+</sup> = `STUV`
+
+T<sup>+</sup> = `STUV`
+
+U<sup>+</sup> = `STUV`
+
+V<sup>+</sup> = `STUV`
+
+All the attributes are candidate keys.
+
 We can perform lossless decomposition of the relation `R` into `R1(S, T, U)` 
 and `R2(U, V)`. Clearly, `R1 ∩ R2 ≠ ∅` because `U` is the common attribute.
 
-Further, the decomposed relations are in **3NF**.
+Further, the decomposed relations are in **BCNF**.
