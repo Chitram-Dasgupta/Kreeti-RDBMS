@@ -17,15 +17,15 @@ EnrollmentNo →StudentName
 
 ## Answer
 
-`{CourseNo, StudentName}^+ -> { CourseNo, StudentName, EntrollmentNo, Grade }`
+{CourseNo, StudentName}<sup>+</sup> -> `{ CourseNo, StudentName, EntrollmentNo, Grade }`
 
-`{CourseNo, EntrollmentNo}^+ -> { CourseNo, StudentName, EntrollmentNo, Grade }`
+{CourseNo, EntrollmentNo}<sup>+</sup> -> `{ CourseNo, StudentName, EntrollmentNo, Grade }`
 
-`Candidate key = { {CourseNo, StudentName}, {CourseNo, EntrollmentNo} }`
+Candidate key = `{ {CourseNo, StudentName}, {CourseNo, EntrollmentNo} }`
 
-`primary attribute = { CourseNo, StudentName, EntrollmentNo }`
+primary attribute = `{ CourseNo, StudentName, EntrollmentNo }`
 
-`non-primary attribute = { Grade }`
+non-primary attribute = `{ Grade }`
 
 For *BCNF*, the relation is not in BCNF because in production `StudentName -> EnrollmentNo`,
 `StudentName` is not a candidate key.
@@ -49,13 +49,13 @@ new relation, decompose and re-compute the keys and the normal forms they satisf
 
 ### a. 
 
-`CE^+ = CEDBA`
+CE<sup>+</sup> = `CEDBA`
 
-`Candidate key = { CE }`
+Candidate key = `{ CE }`
 
-`primary attribute = { C, E }`
+primary attribute = `{ C, E }`
 
-`non-primary attribute = { A, B, D }`
+non-primary attribute = `{ A, B, D }`
 
 ### b.
 
@@ -103,15 +103,15 @@ b. Is this relation in Boyce-Codd Normal Form? Is it 3NF? Explain your answers.
 
 ### a.
 
-`ABC^+ = ABCDEF`
+ABC<sup>+</sup> = `ABCDEF`
 
-`ACD^+ = ACDFBDE`
+ACD<sup>+</sup> = `ACDFBDE`
 
-`Candidate key = { ABC, ACD }`
+Candidate key = `{ ABC, ACD }`
 
-`primary attribute = { A, B, C, D }`
+primary attribute = `{ A, B, C, D }`
 
-`non-primary attribute = { E, F }`
+non-primary attribute = `{ E, F }`
 
 ### b.
 
